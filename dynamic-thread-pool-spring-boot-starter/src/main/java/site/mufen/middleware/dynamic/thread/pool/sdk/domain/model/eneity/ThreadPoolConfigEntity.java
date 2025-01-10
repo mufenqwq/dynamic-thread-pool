@@ -1,5 +1,7 @@
 package site.mufen.middleware.dynamic.thread.pool.sdk.domain.model.eneity;
 
+import java.util.Objects;
+
 /**
  * Represents the configuration for a thread pool.
  * This class contains various properties related to the thread pool configuration
@@ -19,6 +21,18 @@ public class ThreadPoolConfigEntity {
     private String queueType;
     private int queueSize;
     private int remainingCapacity;
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        ThreadPoolConfigEntity that = (ThreadPoolConfigEntity) o;
+        return Objects.equals(appName, that.appName) && Objects.equals(threadPoolName, that.threadPoolName);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(appName, threadPoolName);
+    }
 
     /**
      * Default constructor.
