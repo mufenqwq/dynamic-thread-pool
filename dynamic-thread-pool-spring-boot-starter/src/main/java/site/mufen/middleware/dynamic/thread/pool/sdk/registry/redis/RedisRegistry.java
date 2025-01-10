@@ -4,7 +4,7 @@ import org.redisson.api.RList;
 import org.redisson.api.RedissonClient;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import site.mufen.middleware.dynamic.thread.pool.sdk.domain.model.eneity.ThreadPoolConfigEntity;
+import site.mufen.middleware.dynamic.thread.pool.sdk.domain.model.entity.ThreadPoolConfigEntity;
 import site.mufen.middleware.dynamic.thread.pool.sdk.domain.model.valobj.RegistryEnumVO;
 import site.mufen.middleware.dynamic.thread.pool.sdk.registry.IRegistry;
 

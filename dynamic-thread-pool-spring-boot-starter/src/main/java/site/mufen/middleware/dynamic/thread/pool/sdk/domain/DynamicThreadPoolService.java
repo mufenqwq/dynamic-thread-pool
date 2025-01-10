@@ -2,7 +2,7 @@ package site.mufen.middleware.dynamic.thread.pool.sdk.domain;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import site.mufen.middleware.dynamic.thread.pool.sdk.domain.model.eneity.ThreadPoolConfigEntity;
+import site.mufen.middleware.dynamic.thread.pool.sdk.domain.model.entity.ThreadPoolConfigEntity;
 
 import java.util.*;
 import java.util.concurrent.ThreadPoolExecutor;
@@ -35,7 +35,7 @@ public class DynamicThreadPoolService implements IDynamicThreadPoolService {
             threadPoolConfigEntity.setCorePoolSize(threadPoolExecutor.getCorePoolSize());
             threadPoolConfigEntity.setMaximumPoolSize(threadPoolExecutor.getMaximumPoolSize());
             threadPoolConfigEntity.setActiveCount(threadPoolExecutor.getActiveCount());
-            threadPoolConfigEntity.setPollSize(threadPoolExecutor.getPoolSize());
+            threadPoolConfigEntity.setPoolSize(threadPoolExecutor.getPoolSize());
             threadPoolConfigEntity.setQueueType(threadPoolExecutor.getQueue().getClass().getSimpleName());
             threadPoolConfigEntity.setQueueSize(threadPoolExecutor.getPoolSize());
             threadPoolConfigEntity.setRemainingCapacity(threadPoolExecutor.getQueue().remainingCapacity());
@@ -55,7 +55,7 @@ public class DynamicThreadPoolService implements IDynamicThreadPoolService {
         threadPoolConfigEntity.setCorePoolSize(threadPoolExecutor.getCorePoolSize());
         threadPoolConfigEntity.setMaximumPoolSize(threadPoolExecutor.getMaximumPoolSize());
         threadPoolConfigEntity.setActiveCount(threadPoolExecutor.getActiveCount());
-        threadPoolConfigEntity.setPollSize(threadPoolExecutor.getPoolSize());
+        threadPoolConfigEntity.setPoolSize(threadPoolExecutor.getPoolSize());
         threadPoolConfigEntity.setQueueType(threadPoolExecutor.getQueue().getClass().getSimpleName());
         threadPoolConfigEntity.setQueueSize(threadPoolExecutor.getPoolSize());
         threadPoolConfigEntity.setRemainingCapacity(threadPoolExecutor.getQueue().remainingCapacity());

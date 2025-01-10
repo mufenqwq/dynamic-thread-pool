@@ -1,15 +1,11 @@
-package site.mufen.middleware.dynamic.thread.pool.sdk.domain.model.eneity;
+package site.mufen.middleware.dynamic.thread.pool.sdk.domain.model.entity;
 
 import java.util.Objects;
 
 /**
- * Represents the configuration for a thread pool.
- * This class contains various properties related to the thread pool configuration
- * such as the application name, thread pool name, core pool size, maximum pool size, etc.
- *
  * @author mufen
- * @version 1.0
- * @since 2025-01-10
+ * @Description
+ * @create 2025/1/10 21:11
  */
 public class ThreadPoolConfigEntity {
     private String appName;
@@ -17,7 +13,7 @@ public class ThreadPoolConfigEntity {
     private int corePoolSize;
     private int maximumPoolSize;
     private int activeCount;
-    private int pollSize;
+    private int poolSize;
     private String queueType;
     private int queueSize;
     private int remainingCapacity;
@@ -146,17 +142,17 @@ public class ThreadPoolConfigEntity {
      *
      * @return the poll size
      */
-    public int getPollSize() {
-        return pollSize;
+    public int getPoolSize() {
+        return poolSize;
     }
 
     /**
      * Sets the poll size.
      *
-     * @param pollSize the poll size to set
+     * @param poolSize the poll size to set
      */
-    public void setPollSize(int pollSize) {
-        this.pollSize = pollSize;
+    public void setPoolSize(int poolSize) {
+        this.poolSize = poolSize;
     }
 
     /**

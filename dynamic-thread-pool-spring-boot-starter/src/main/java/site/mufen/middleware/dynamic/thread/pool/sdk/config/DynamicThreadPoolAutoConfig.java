@@ -1,6 +1,5 @@
 package site.mufen.middleware.dynamic.thread.pool.sdk.config;
 
-import com.alibaba.fastjson.JSON;
 import org.apache.commons.lang.StringUtils;
 import org.redisson.Redisson;
 import org.redisson.api.RBucket;
@@ -17,7 +16,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import site.mufen.middleware.dynamic.thread.pool.sdk.domain.DynamicThreadPoolService;
 import site.mufen.middleware.dynamic.thread.pool.sdk.domain.IDynamicThreadPoolService;
-import site.mufen.middleware.dynamic.thread.pool.sdk.domain.model.eneity.ThreadPoolConfigEntity;
+import site.mufen.middleware.dynamic.thread.pool.sdk.domain.model.entity.ThreadPoolConfigEntity;
 import site.mufen.middleware.dynamic.thread.pool.sdk.domain.model.valobj.RegistryEnumVO;
 import site.mufen.middleware.dynamic.thread.pool.sdk.registry.IRegistry;
 import site.mufen.middleware.dynamic.thread.pool.sdk.registry.redis.RedisRegistry;
@@ -25,8 +24,6 @@ import site.mufen.middleware.dynamic.thread.pool.sdk.trigger.job.ThreadPoolDataR
 import site.mufen.middleware.dynamic.thread.pool.sdk.trigger.listener.ThreadPoolConfigAdjustListener;
 
 import java.util.Map;
-import java.util.Set;
-import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.ThreadPoolExecutor;
 
 /**
@@ -87,7 +84,7 @@ public class DynamicThreadPoolAutoConfig {
         
         // 获取Redis 中缓存数据，设置本地线程池配置
         for (String threadPoolKey : threadPoolExecutorMap.keySet()) {
-            RBucket<ThreadPoolConfigEntity> bucket = redissonClient.<ThreadPoolConfigEntity>getBucket(threadPoolKey);
+            RBucket<ThreadPoolConfigEntity> bucket = redissonClient.getBucket(threadPoolKey);
             if (null == bucket) continue;;
             ThreadPoolConfigEntity threadPoolConfigEntity = bucket.get();
             if (null == threadPoolConfigEntity) continue;

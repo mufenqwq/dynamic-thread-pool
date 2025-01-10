@@ -5,7 +5,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.scheduling.annotation.Scheduled;
 import site.mufen.middleware.dynamic.thread.pool.sdk.domain.IDynamicThreadPoolService;
-import site.mufen.middleware.dynamic.thread.pool.sdk.domain.model.eneity.ThreadPoolConfigEntity;
+import site.mufen.middleware.dynamic.thread.pool.sdk.domain.model.entity.ThreadPoolConfigEntity;
 import site.mufen.middleware.dynamic.thread.pool.sdk.registry.IRegistry;
 
 import java.util.List;

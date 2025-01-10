@@ -1,6 +1,6 @@
 package site.mufen.middleware.dynamic.thread.pool.sdk.domain;
 
-import site.mufen.middleware.dynamic.thread.pool.sdk.domain.model.eneity.ThreadPoolConfigEntity;
+import site.mufen.middleware.dynamic.thread.pool.sdk.domain.model.entity.ThreadPoolConfigEntity;
 
 import java.util.List;
 
